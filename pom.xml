@@ -15,8 +15,7 @@
 	</description>
 	<!--总线 -->
 	<modules>
-		<module>db-proxy</module>
-		<module>db-client</module>
+		<module>saas</module>
 	</modules>
 
 	<!-- 远程仓库构件对应配置 -->
