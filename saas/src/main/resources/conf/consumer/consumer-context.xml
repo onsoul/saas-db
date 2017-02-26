@@ -6,9 +6,10 @@
          http://code.alibabatech.com/schema/dubbo
          http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 	<description>服务消费方配置（调用数据层）</description>
-	
+
 	<!-- 配置文件加载 -->
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath*:conf/consumer/consumer.properties</value>
@@ -16,7 +17,7 @@
 		</property>
 		<property name="ignoreUnresolvablePlaceholders" value="true" />
 	</bean>
-	
+
 	<import resource="classpath*:/conf/consumer/consumer-service.xml" />
-	
+
 </beans>

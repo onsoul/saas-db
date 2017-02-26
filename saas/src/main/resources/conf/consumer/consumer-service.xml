@@ -6,16 +6,18 @@
          http://code.alibabatech.com/schema/dubbo
          http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 	<description>dubbo注册中心配置</description>
-	
+
 	<dubbo:application name="${application.name}" owner="${application.owner}" />
 	<!-- 注册中心配置 -->
 	<dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" />
 	<!-- 协议配置 -->
-	<dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" host="${application.ip}" />
-	
+	<dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}"
+		host="${application.ip}" />
+
 	<dubbo:consumer check="true" />
-	
+
 	<!-- 服务消费者接口声明 -->
-	<dubbo:reference id="recordService" filter="scma" interface="com.hitler.service.business.IRecordService" version="${d.consumer.version}" />
-	 
+	<dubbo:reference id="recordService" filter="scma"
+		interface="com.hitler.service.business.IRecordService" version="${d.consumer.version}" />
+
 </beans>

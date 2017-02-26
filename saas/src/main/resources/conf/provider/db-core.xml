@@ -48,11 +48,12 @@
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
-	
+
 	<!--使用注解定义事务 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	<!--JPA实体管理器配置 -->
-	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="persistenceUnitName" value="db-proxy" />
 		<property name="jpaProperties">
@@ -65,7 +66,8 @@
 				<!-- Hibernate二级缓存 <prop key="hibernate.cache.use_second_level_cache">false</prop> -->
 				<!-- 采用ehcache作为Hibernate二级缓存 http://ehcache.org/ -->
 				<prop key="hibernate.cache.use_second_level_cache">true</prop>
-				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory
+				</prop>
 				<prop key="hibernate.cache.provider_configuration">classpath:conf/provider/ehcache.xml</prop>
 				<prop key="hibernate.cache.use_query_cache">true</prop>
 				<prop key="hibernate.ejb.interceptor">com.hitler.common.aop.CheageSchemaInterceptor</prop>
@@ -81,8 +83,9 @@
 		entity-manager-factory-ref="entityManagerFactory"
 		transaction-manager-ref="transactionManager" repository-impl-postfix="Impl"
 		factory-class="com.hitler.repository.support.DefaultRepositoryFactoryBean" />
-	<jpa:auditing auditor-aware-ref="auditorAware" date-time-provider-ref="" />
+	<jpa:auditing auditor-aware-ref="auditorAware"
+		date-time-provider-ref="" />
 	<bean id="auditorAware" class="com.hitler.common.model.auditing.DefaultAuditorAware" />
-	
-	
+
+
 </beans>

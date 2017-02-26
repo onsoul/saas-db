@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans.xsd
          http://code.alibabatech.com/schema/dubbo
          http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-    <description>DUBBO 通用配置</description>
-    
-    <dubbo:application name="${application.name}" />
- 
-    <!-- 注册中心配置,见db*.properties -->
-    <dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" />
-    
-    <dubbo:protocol host="${application.ip}" name="${dubbo.protocol}" port="${dubbo.registry.port}" />
-    
-    <dubbo:provider timeout="${dubbo.timeout}" serialization="${dubbo.serial}"/>
- 
-	<dubbo:service ref="recordService" interface="com.hitler.service.business.IRecordService" version="${dubbo.version}"/>
-	
+	<description>DUBBO 通用配置</description>
+
+	<dubbo:application name="${application.name}" />
+
+	<!-- 注册中心配置,见db*.properties -->
+	<dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" />
+
+	<dubbo:protocol host="${application.ip}" name="${dubbo.protocol}"
+		port="${dubbo.registry.port}" />
+
+	<dubbo:provider timeout="${dubbo.timeout}"
+		serialization="${dubbo.serial}" />
+
+	<dubbo:service ref="recordService"
+		interface="com.hitler.service.business.IRecordService" version="${dubbo.version}" />
+
 </beans>
