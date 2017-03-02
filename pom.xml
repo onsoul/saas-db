@@ -7,12 +7,7 @@
 	<name>ha-db</name>
 	<version>0.0.1</version>
 	<packaging>pom</packaging>
-
-	<description>
-	note:直接切的大项目依赖.有一些多余的JAR没有清理.
-	有那么几个报错的依赖是自定义到私服，不影响主线.删除即可。
-	此pom对应 Hitler,声明 环境配置、编译、基础依赖声明、私服内仓对接线
-	</description>
+	 
 	<!--总线 -->
 	<modules>
 		<module>saas</module>
@@ -377,22 +372,7 @@
 				<version>4.12</version>
 				<scope>test</scope>
 			</dependency>
-
-			<!-- pushlet line <dependency> <groupId>nl.justobjects</groupId> <artifactId>pushlet</artifactId> 
-				<version>2.0.5</version> </dependency> -->
-
-			<dependency>
-				<groupId>com.docjar</groupId>
-				<artifactId>ezmorph</artifactId>
-				<version>1.0.6</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.docjar</groupId>
-				<artifactId>json-lib</artifactId>
-				<version>2.4</version>
-				<classifier>jdk15</classifier>
-			</dependency>
+			 
 		</dependencies>
 	</dependencyManagement>
 
@@ -652,17 +632,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
-		<dependency>
-			<groupId>com.docjar</groupId>
-			<artifactId>ezmorph</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.docjar</groupId>
-			<artifactId>json-lib</artifactId>
-			<classifier>jdk15</classifier>
-		</dependency>
+	 
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-dbcp2</artifactId>

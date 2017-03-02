@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import javax.persistence.Transient;
-import net.sf.json.JSONObject;
 
 /** 
 *转换器 
@@ -88,38 +87,6 @@ public class BeanConverter
         } 
 
         return result; 
-    } 
-    /** 
-     * 将json对象转换成Map 
-     * 
-     * @param jsonObject json对象 
-     * @return Map对象 
-     */ 
-    @SuppressWarnings("unchecked") 
-    public static Map<String, String> toMap(JSONObject jsonObject) 
-    { 
-        Map<String, String> result = new HashMap<String, String>(); 
-        Iterator<String> iterator = jsonObject.keys(); 
-        String key = null; 
-        String value = null; 
-        while (iterator.hasNext()) 
-        { 
-            key = iterator.next(); 
-            value = jsonObject.getString(key); 
-            result.put(key, value); 
-        } 
-        return result; 
-    } 
-
-    /** 
-     * 将javaBean转换成JSONObject 
-     * 
-     * @param bean javaBean 
-     * @return json对象 
-     */ 
-    public static JSONObject toJSON(Object bean) 
-    { 
-        return JSONObject.fromObject(toMap(bean)); 
     } 
 
     /** 
