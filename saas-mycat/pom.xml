@@ -33,7 +33,7 @@
 		<aopalliance.version>1.0</aopalliance.version>
 		<ehcache-core.version>2.6.6</ehcache-core.version>
 
-		<org.elasticsearch.version>1.5.1</org.elasticsearch.version>
+		<org.elasticsearch.version>6.8.15</org.elasticsearch.version>
 		<org.hibernate-version>4.3.5.Final</org.hibernate-version>
 		<springframework.version>4.1.0.RELEASE</springframework.version>
 		<spring-data-jpa.version>1.7.0.RELEASE</spring-data-jpa.version>
