@@ -1,3 +1,4 @@
+## @Deprecated
 ## SAAS 原型
 ## saas-mycat
 
