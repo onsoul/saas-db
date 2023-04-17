@@ -36,7 +36,7 @@
 		<org.elasticsearch.version>1.5.1</org.elasticsearch.version>
 		<org.hibernate-version>4.3.5.Final</org.hibernate-version>
 		<springframework.version>4.1.0.RELEASE</springframework.version>
-		<spring-data-jpa.version>1.7.0.RELEASE</spring-data-jpa.version>
+		<spring-data-jpa.version>1.11.23.RELEASE</spring-data-jpa.version>
 		<shiro.version>2.2.1</shiro.version>
 		<freemarker.version>2.3.20</freemarker.version>
 	</properties>
